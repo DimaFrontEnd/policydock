@@ -1,22 +1,58 @@
 .b_registration_info{
   padding: 50px 0 30px;
   background-color: #4080FE;
+  
+  .section_title{
+    color: #F8F8F8;
+    margin: 0 auto 60px;
+  }
 
   .registration_wrapper{
-    
+    margin: 0 -12px;
   }
 
   .step_wrapper{
-    width: 33.33%;
+    width: calc(33.33% - 24px);
     border-radius: 18px;
     background-color: #ffffff;
     transition: all .2s linear;
     text-align: center;
+    padding: 20px 40px;
+    margin: 0 12px 24px;
 
     &:hover{
       background-color: #F1FDFF;
       box-shadow: 0px 2px 50px rgba(10, 25, 38, 0.5);
     }
 
+  }
+
+  .step_number{
+    font-size: 24px;
+    font-weight: 700;
+    color: #4080FE;
+    margin: 0 auto 20px;
+  }
+
+  .step_image{
+    height: 135px;
+    position: relative;
+    margin: 0 auto 25px ;
+
+    img{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-height: 100%;
+    }
+  }
+
+  .step_title{
+    font-weight: 700;
+    max-width: 315px;
+    margin: 0 auto;
   }
 }
