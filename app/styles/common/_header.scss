@@ -1,0 +1,139 @@
+.b_header {
+  background-color: #fff;
+
+  .header_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu_wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 70px 0 0;
+  }
+
+  .menu {
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+
+    >ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+
+      >li {
+        display: inline-block;
+        vertical-align: middle;
+
+        +li {
+          margin: 0 0 0 64px;
+        }
+
+        >a {
+          color: #797B80;
+          transition: all .2s linear;
+
+          &:hover {
+            color: #4080FE;
+          }
+        }
+      }
+    }
+
+    .has-sub-menu {
+      position: relative;
+    }
+
+    .sub-menu {
+      position: absolute;
+      z-index: 2;
+      top: 100%;
+      border-radius: 5px;
+      left: 0;
+      box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
+      background-color: #fff;
+      min-width: 188px;
+      overflow: hidden;
+      display: none;
+
+      a {
+        display: block;
+        color: #797B80;
+        padding: 5px 15px;
+        font-size: 14px;
+        transition: all .2s linear;
+
+        &:hover {
+          background-color: #EBF1FF;
+          color: #4080FE;
+        }
+      }
+    }
+  }
+}
+
+
+.menu_toggler {
+  position: fixed;
+  border: none;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: none;
+  z-index: 1001;
+  background-color: #eb1f26;
+
+  @media(max-width: $screen-sm-max) {
+    display: block;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    padding: 0;
+    background: #fff;
+    position: absolute;
+    transition: transform 0.5s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.25s ease-in-out 0.5s;
+    transform-origin: center;
+    left: 8px;
+  }
+
+  .toggler_top {
+    top: 12px;
+  }
+
+  .toggler_middle {
+    top: 19px;
+  }
+
+  .toggler_bottom {
+    top: 26px;
+  }
+
+  &.menu-is-active span {
+    transition: transform 0.5s ease-in-out 0.3s, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  }
+
+  &.menu-is-active span.toggler_top {
+    top: 18px;
+    transform: rotate(135deg);
+  }
+
+  &.menu-is-active span.toggler_middle {
+    opacity: 0;
+    transform: rotate(135deg);
+  }
+
+  &.menu-is-active span.toggler_bottom {
+    top: 18px;
+    transform: rotate(225deg);
+  }
+}

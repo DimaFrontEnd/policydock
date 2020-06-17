@@ -1,0 +1,30 @@
+.jsTabs {
+  .jsTabsTab {
+    cursor: pointer;
+  }
+
+  .jsTabsItem {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.-active {
+      overflow: visible;
+      position: static;
+      z-index: 1;
+      height: auto;
+    }
+
+    &.-fade {
+      opacity: 1;
+      visibility: visible;
+      transition: .3s;
+    }
+  }
+}

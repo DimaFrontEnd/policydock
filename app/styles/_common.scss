@@ -1,0 +1,63 @@
+$text-color: #384053;
+
+* {
+  outline: 0 !important;
+} 
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: $text-color;
+  min-width: 320px;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  h1, h2 {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  input, textarea, select, select:focus {
+    font-size: 16px;
+  }
+}

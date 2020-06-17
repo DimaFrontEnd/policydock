@@ -1,0 +1,57 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 18px 25px;
+  transition: all .2s linear;
+  font-size: 16px;
+  font-weight: 600;
+  height: auto;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: none;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  line-height: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 220px;
+
+  @media(max-width: $screen-sm-max) {
+    min-width: 180px;
+    padding: 15px 10px;
+  }
+
+  @media(max-width: $screen-xs-max) {
+    padding: 11px 20px;
+    font-size: 16px;
+    min-width: 160px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn_blue {
+  color: #fff;
+  border-color: #4080FE;
+  background-color: #4080FE;
+
+  &:focus {
+    color: #fff;
+    
+  }
+
+  &:active {
+    color: #fff;
+  }
+
+  &:hover {
+    border-color: #009ceb;
+    background-color: #009ceb;
+    color: #fff;
+  }
+}

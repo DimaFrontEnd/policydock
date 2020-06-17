@@ -1,0 +1,22 @@
+.b_registration_info{
+  padding: 50px 0 30px;
+  background-color: #4080FE;
+
+  .registration_wrapper{
+    
+  }
+
+  .step_wrapper{
+    width: 33.33%;
+    border-radius: 18px;
+    background-color: #ffffff;
+    transition: all .2s linear;
+    text-align: center;
+
+    &:hover{
+      background-color: #F1FDFF;
+      box-shadow: 0px 2px 50px rgba(10, 25, 38, 0.5);
+    }
+
+  }
+}
