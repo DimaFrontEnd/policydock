@@ -2,8 +2,9 @@ var app = {
 
   init: function () {
     app.windowResize();
-    app.modals();
     app.menu();
+    app.modals();
+    app.sliders();
     app.tabs();
     app.accordeon();
   },
@@ -40,9 +41,9 @@ var app = {
 
 
   sliders: function () {
-    $('.jsTestemonials').slick({
+    $('.jsManagementWrapper').slick({
       arrows: false,
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1,
       touchThreshold: 15,
       responsive: [

@@ -1,3 +1,146 @@
 .b_future{
-  padding: 25px 0;
+  overflow: hidden;
+  padding: 25px 0 20px;
+
+  .section_title{
+    margin: 0 auto 10px;
+  }
+
+  .future_wrapper{
+    align-items: center;
+  }
+
+  .future_block_wrapper{
+    max-width: 280px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
+    border-radius: 18px;
+    padding: 15px 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+
+    .icon_wrapper {
+      margin: 0 auto 10px;
+    }
+
+    img{
+      margin: 0 auto;
+    }
+
+    .title{
+      font-weight: 700;
+      color: #384053;
+      margin: 0 auto 10px;
+    }
+
+    .list{
+      ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: #797B80;
+        font-size: 16px;
+        font-weight: 500;
+
+        li{
+          + li{
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .future_description{
+    width: 460px;
+  }
+
+  .future_info{
+    width: calc(100% - 500px);
+    margin-right: 40px;
+    position: relative;
+    padding: 170px 0 170px 0;
+  }
+
+  .future_info_list{
+
+  }
+
+  .future_info_item{
+    position: absolute;
+    text-align: center;
+
+    .item_icon{
+      position: relative;
+      height: 48px;
+      min-width: 50px;
+      margin: 0 0 5px;
+
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        max-height: 100%;
+      }
+    }
+
+    &:nth-child(1){
+      top: 0;
+      left: 55%;
+    }
+    &:nth-child(2){
+      right: 13%;
+      top: 13%;
+    }
+    &:nth-child(3){
+      right: 0;
+      top: 30%;
+
+      .item_title{
+        max-width: 160px;
+      }
+    }
+    &:nth-child(4){
+      bottom: 30%;
+      right: 15px;
+    }
+    &:nth-child(5){
+      right: 0;
+      bottom: 10%;
+    }
+    &:nth-child(6){
+      bottom: 0;
+      left: 50%;
+    }
+    &:nth-child(7){
+      bottom: 30px;
+      right: 70%;
+    }
+    &:nth-child(8){
+      left: 7%;
+      bottom: 25%;
+    }
+    &:nth-child(9){
+      left: 0;
+      bottom: 45%;
+    }
+    &:nth-child(10){
+      top: 10%;
+      left: 6%;
+    }
+    &:nth-child(11){
+      top: 0;
+      right: 55%;
+    }
+  }
+
+  .item_title{
+    font-weight: 700;
+    color: #384053;
+    max-width: 190px;
+    margin: 0 auto;
+  }
 }

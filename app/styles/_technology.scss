@@ -1,9 +1,94 @@
 .b_technology{
   background-color: #A2DFFF;
   padding: 70px 0 60px;
+  overflow: hidden;
 
   .section_title{
     max-width: 560px;
     margin: 0 auto 60px;
+  }
+
+  .technology_column{
+    position: relative;
+    width: 33.33%;
+
+    &.first_column{
+      .tech_title{
+        transform: rotate(-90deg) translate(-50%, 0);
+        transform-origin: left top;
+        top: 50%;
+        left: 0;
+        margin: 0 0 0 -10px;
+      }
+    }
+
+    &.last_column{
+      .tech_title{
+        transform: rotate(90deg) translate(-50%, 0);
+        transform-origin: bottom left;
+        top: 50%;
+        left: 0;
+      }
+    }
+  }
+
+  .tech_title{
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #384053;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
+    padding: 6px 10px;
+    text-align: center;
+    min-width: 218px;
+    white-space: nowrap;
+  }
+
+  .block_title{
+    color: #4080FE;
+    font-size: 24px;
+    margin: 0 0 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .white_section_wrapper{
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 15px 15px;
+  }
+
+  .block_item{
+    font-size: 18px;
+    padding: 10px 5px;
+    background-color: #E9EFFF;
+    border: 1px solid #B8CCFF;
+    border-radius: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #797B80;
+    margin: 0 auto;
+
+    &:not(:last-of-type){
+      margin: 0 auto 4px;
+    }
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        + li{
+          margin: 13px 0 0;
+        }
+      }
+    }
   }
 }

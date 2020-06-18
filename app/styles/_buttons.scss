@@ -55,3 +55,25 @@
     color: #fff;
   }
 }
+
+
+.btn_white{
+  color: #4080FE;
+  border-color: #fff;
+  background-color: #fff;
+
+  &:focus {
+    color: #fff;
+    
+  }
+
+  &:active {
+    color: #fff;
+  }
+
+  &:hover {
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+  }
+}

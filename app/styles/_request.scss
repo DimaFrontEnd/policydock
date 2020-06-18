@@ -1,15 +1,96 @@
-.b_request{
+.b_request {
   background-color: #E5F2FD;
   padding: 100px 0 120px;
 
-  .section_title{
+  .form_control {
+    width: 100%;
+    border: 1px solid #D4D3E0;
+    background-color: #FAFAFD;
+
+    &:hover {
+      border-color: #384053;
+    }
+  }
+
+  .form_row {
+    +.form_row {
+      margin: 20px 0 0;
+    }
+  }
+
+  .item_label {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 0 3px 9px;
+  }
+
+  .section_title {
     margin: 0 0 60px;
   }
 
-  .request_wrapper{
+  .request_wrapper {
     background-color: #fff;
     box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
     border-radius: 18px;
     padding: 56px 56px;
+  }
+
+  .form_items {
+    width: 375px;
+  }
+
+  .form_description {
+    width: calc(100% - 375px);
+    padding: 0 0 0 125px;
+  }
+
+  .description_list {
+    max-width: 400px;
+    font-size: 14px;
+    padding: 30px 0 0;
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding: 0 0 0 37px;
+
+        &::before{
+          position: absolute;
+          content: '';
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: #ECF2FF;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5606 0.171964C11.018 0.481534 11.1378 1.10326 10.8282 1.56063L8.54451 4.9346L5.32113 9.57093C5.13784 9.83457 4.8391 9.99416 4.51805 9.99994C4.19701 10.0057 3.89272 9.85698 3.70006 9.6001L0.700059 5.6001C0.368688 5.15827 0.458231 4.53147 0.900059 4.2001C1.34189 3.86873 1.96869 3.95827 2.30006 4.4001L4.46933 7.29246L6.89873 3.79805L9.17192 0.439573C9.48149 -0.0177939 10.1032 -0.137607 10.5606 0.171964Z' fill='%234080FE'/%3E%3C/svg%3E");
+          left: 0;
+          top: -2px;
+        }
+
+        +li {
+          margin: 50px 0 0;
+        }
+      }
+    }
+  }
+
+
+  .form_bottom{
+    padding: 60px 0 0;
+    max-width: 830px;
+
+    .title{
+      margin: 0 0 35px;
+      font-size: 32px;
+    }
+  }
+
+  .checkbox_label{
+    margin: 0 55px 20px 0;   
   }
 }

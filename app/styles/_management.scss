@@ -1,19 +1,119 @@
-.b_management{
+.b_management {
   background-color: #E5F2FD;
   padding: 40px 0 0;
 
-  .section_title{
+  .section_title {
     margin: 0 auto 50px;
   }
 
-  .management_image{
+  .management_wrapper {
+    margin: 0 -8px;
+  }
+
+  .management_image {
     max-width: 235px;
     margin: 0 0 25px;
   }
 
-  .image_wrapper{
+  .slick-list {
+    padding: 0 0 20px;
+  }
+
+  .image_wrapper {
     padding: 0 0 100%;
     background-color: #D4D3E0;
     border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .management_item {
+    padding: 0 8px;
+  }
+
+  .management_content {
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
+    padding: 15px 15px;
+
+    .title {
+      font-weight: 700;
+      font-size: 32px;
+      margin: 0 0 10px;
+    }
+  }
+
+  .sub_title_wrapper {
+    font-size: 32px;
+    margin: 0 0 10px;
+
+    .sub_title {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px 0 0;
+    }
+  }
+
+  .acc_link {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    img {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 100%;
+    }
+  }
+
+  .management_list {
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding: 0 0 0 15px;
+        font-weight: 700;
+        color: #797B80;
+
+        +li {
+          margin: 10px 0 0;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          top: 4px;
+          background: #4080FE;
+          opacity: 0.2;
+          left: -7px;
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          top: 8px;
+          left: -3px;
+          background-color: #4080FE;
+          box-shadow: 0px 1px 10px rgba(64, 128, 254, 0.7);
+        }
+      }
+    }
   }
 }
