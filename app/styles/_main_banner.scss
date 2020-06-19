@@ -1,0 +1,99 @@
+.b_main_banner {
+  color: #fff;
+
+  .video_link {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='70' viewBox='0 0 52 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1.8784C0 1.0777 0.894125 0.601722 1.55838 1.04881L50.7675 34.1703C51.3563 34.5667 51.3563 35.4332 50.7675 35.8295L1.55837 68.951C0.894123 69.3981 0 68.9221 0 68.1214V1.8784Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s linear;
+
+    &:hover {
+      background-color: rgba(64, 128, 254, 0.6);
+
+      &::before {
+        background-color: rgba(64, 128, 254, 0.15);
+      }
+    }
+
+    &::before {
+      content: '';
+      transition: all .3s linear;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -30px;
+      bottom: -30px;
+      right: -30px;
+      left: -30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .banner_wrapper {
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 775px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .banner_image_wrapper {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    max-width: 1270px;
+  }
+
+  .banner_image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto 0 auto auto;
+    }
+  }
+
+  .banner_inner {
+    max-width: 55%;
+  }
+
+  .banner_title {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .banner_content_wrapper {
+    max-width: 500px;
+    margin: 0 0 35px;
+  }
+}

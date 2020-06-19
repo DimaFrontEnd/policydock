@@ -3,9 +3,20 @@ extends layouts/default
 block content
 
   .b_main_banner
-    .banner_slider
-      .banner_slide
-        .container
+    .banner_wrapper(style="background-image: url('images/banner.jpg');")
+      .container
+        .banner_inner
+          .banner_title Insurance<br> Platform-as-a-Service
+          .banner_content_wrapper
+            p You never know where a cyberthreat will come from. Our multilayered protection is utmost at stopping them while fueling your Mac performance, too.
+          .btn_wrapper
+            a.btn.btn_blue(href="#") Request a Demo
+
+        a.video_link(href="#")
+      
+      .banner_image_wrapper
+        .banner_image
+          img(src="images/banner_image.png", alt="")
 
 
 
@@ -212,7 +223,7 @@ block content
               .block_item Full Product Design
 
         
-        .technology_column
+        .technology_column.second_column
           .white_section_wrapper
             .block_title PD Dock
             .block_item_wrapper
@@ -223,13 +234,13 @@ block content
                   li Data Management
                   li API Integrations
                   li Branding
-              .block_item
+              .block_item.yellow
                 ul
                   li Easy Integration
                   li Speed to Market
                   li Quick
                   li Deployment
-              .block_item
+              .block_item.green
                 .block_title Supports
                 ul
                   li Life
@@ -241,6 +252,42 @@ block content
         
         .technology_column.last_column
           .tech_title Micro-serrvice architecture
+
+          .last_column_wrapper
+
+            .serrvices_wrapper.flex
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item01.svg", alt="")
+                .serrvice_title Mobile
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item02.svg", alt="")
+                .serrvice_title Agent Portal
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item03.svg", alt="")
+                .serrvice_title Customer Portal
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item04.svg", alt="")
+                .serrvice_title Banks
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item05.svg", alt="")
+                .serrvice_title E-commerce
+              .serrvice_item
+                .serrvice_image
+                  img(src="images/serrvice_item06.svg", alt="")
+                .serrvice_title Social Media
+            
+            .platform_list
+              .block_title PD Insure Platform
+              .list_wrapper
+                .list_item Partner apps / app store
+                .list_item Added modules (finance, claims,BI, reports, analytics
+                .list_item Build your own
+                .list_item Data ETL
 
 
 
