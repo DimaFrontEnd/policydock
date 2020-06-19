@@ -23,12 +23,27 @@ var app = {
 
   
   menu: function () {
+    $('.b_header').sticky({
+      topSpacing: 0,
+      zIndex: 5
+    });
+
     var $btnMenu = $('.jsMenu');
     $btnMenu.click(function () {
       $(this).toggleClass('menu-is-active');
-      // $('.nav').slideToggle();
-      // $('body').toggleClass('menuopen');
+      $('.menu').toggleClass('open');
+      $('body').toggleClass('menuopen');
     });
+
+    if($('.has-sub-menu').length){
+      $('.has-sub-menu > a').each(function(){
+        var $this = $(this);
+        $this.on('click', function(e){
+          e.preventDefault();
+          $this.next('.sub-menu').slideToggle(300)
+        });
+      });
+    }
   },
 
 
@@ -46,17 +61,32 @@ var app = {
       slidesToShow: 5,
       slidesToScroll: 1,
       touchThreshold: 15,
+      speed: 700,
+      autoplay: true,
+      autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 992,
+          breakpoint: 1300,
           settings: {
-            
+            slidesToShow: 4,
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 992,
           settings: {
-            
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 410,
+          settings: {
+            slidesToShow: 1,
           }
         }
       ]

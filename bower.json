@@ -1,13 +1,11 @@
 {
-  "name": "woodmaster",
+  "name": "policydock",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "magnific-popup": "^1.1.0",
     "slick-carousel": "^1.8.1",
-    "jquery.maskedinput": "^1.4.1",
-    "jquery-validation": "^1.17.0"
+    "jquery-sticky": "sticky#^1.0.4"
   },
   "overrides": {
     "bootstrap-sass": {

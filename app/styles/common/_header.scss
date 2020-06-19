@@ -8,13 +8,59 @@
     align-items: center;
   }
 
+  .header_link {
+    display: inline-block;
+    vertical-align: middle;
+
+    @media(max-width: 374px) {
+      max-width: 80px;
+    }
+  }
+
+  .btn {
+    padding: 13px 25px;
+
+    @media(max-width: $screen-xs-max) {
+      padding: 9px 10px;
+      min-width: auto;
+    }
+  }
+
   .menu_wrapper {
     display: inline-block;
     vertical-align: middle;
     margin: 0 70px 0 0;
+
+    @media(max-width: $screen-md-max) {
+      margin: 0 35px 0 0;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      margin: 0;
+    }
   }
 
   .menu {
+    @media(max-width: $screen-xs-max) {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: -280px;
+      bottom: 0;
+      width: 280px;
+      transition: all .3s linear;
+      background-color: #fff;
+      padding: 40px 20px 20px;
+      overflow: auto;
+    }
+
+    &.open {
+      @media(max-width: $screen-xs-max) {
+        left: 0;
+        box-shadow: 0px 2px 50px rgba(10, 25, 38, 0.5);
+      }
+    }
+
     ul {
       padding: 0;
       list-style: none;
@@ -30,8 +76,20 @@
         display: inline-block;
         vertical-align: middle;
 
+        @media(max-width: $screen-xs-max) {
+          display: block;
+        }
+
         +li {
           margin: 0 0 0 64px;
+
+          @media(max-width: $screen-md-max) {
+            margin: 0 0 0 34px;
+          }
+
+          @media(max-width: $screen-xs-max) {
+            margin: 15px 0 0;
+          }
         }
 
         >a {
@@ -47,6 +105,17 @@
 
     .has-sub-menu {
       position: relative;
+
+      &:hover {
+        .sub-menu {
+          @media(min-width: $screen-sm-min) {
+            transition: all .2s linear;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+          }
+        }
+      }
     }
 
     .sub-menu {
@@ -57,9 +126,23 @@
       left: 0;
       box-shadow: 0px 2px 90px rgba(38, 80, 119, 0.1);
       background-color: #fff;
-      min-width: 188px;
-      overflow: hidden;
-      display: none;
+      
+      @media(min-width: $screen-sm-min) {
+        transition: all .1s linear;
+        transform: translate(0, 10px);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 188px;
+      }
+
+      @media(max-width: $screen-xs-max) {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+      }
+
 
       a {
         display: block;
@@ -79,19 +162,22 @@
 
 
 .menu_toggler {
-  position: fixed;
+  position: relative;
   border: none;
   padding: 0;
   top: 0;
   right: 0;
   width: 40px;
+  border-radius: 8px;
   height: 40px;
   display: none;
   z-index: 1001;
-  background-color: #eb1f26;
+  background-color: #4080FE;
 
-  @media(max-width: $screen-sm-max) {
-    display: block;
+  @media(max-width: $screen-xs-max) {
+    display: inline-block;
+    vertical-align: middle;
+
   }
 
   span {

@@ -2,18 +2,30 @@
   padding: 40px 0 120px;
   overflow: hidden;
 
+  @media(max-width: $screen-sm-max) {
+    padding: 40px 0 40px;
+  }
+
   .section_title {
     margin: 0 auto 20px;
   }
 
   .team_wrapper {
     align-items: center;
+
+    @media(max-width: $screen-xs-max) {
+      display: block;
+    }
   }
 
   .team_image {
     width: 50%;
     text-align: center;
     position: relative;
+
+    @media(max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
 
   .team_image_decor {
@@ -34,6 +46,12 @@
     padding: 0 15px;
     position: relative;
     z-index: 1;
+
+    @media(max-width: $screen-xs-max) {
+      width: 100%;
+      margin: 30px 0 0;
+      padding: 0;
+    }
 
     .content {
       color: #797B80;

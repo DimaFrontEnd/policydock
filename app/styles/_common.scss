@@ -12,6 +12,19 @@ body {
   min-width: 320px;
   background-color: #fff;
   line-height: 1.4;
+
+  @media(max-width: $screen-md-max) {
+    font-size: 16px;
+  }
+
+  @media(max-width: $screen-xs-max) {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &.menuopen{
+    overflow: hidden;
+  }
 }
 
 p {
@@ -36,6 +49,10 @@ h3 {
 
 p {
   line-height: 1.4;
+
+  @media(max-width: $screen-xs-max) {
+    line-height: 1.5;
+  }
 }
 
 p:not(:last-child) {

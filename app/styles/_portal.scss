@@ -1,25 +1,57 @@
-.b_portal{
+.b_portal {
   padding: 70px 0 140px;
 
-  .section_title{
+  @media(max-width: $screen-sm-max) {
+    padding: 40px 0 40px;
+  }
+
+  .section_title {
     margin: 0 auto 60px;
     max-width: 735px;
+
+    @media(max-width: $screen-sm-max) {
+      margin: 0 auto 30px;
+    }
   }
 
-  .portal_wrapper{
+  .portal_wrapper {
     margin: 0 -15px;
+
+    @media(max-width: $screen-sm-max) {
+      display: block;
+      margin: 0;
+    }
   }
 
-  .portal_image{
+  .portal_image {
     width: 58.33333333%;
+
+    @media(max-width: $screen-sm-max) {
+      width: 100%;
+      margin: 0 auto 30px;
+    }
   }
 
-  .portal_info{
+  .portal_info {
     width: 41.66666667%;
     padding: 0 15px;
+
+    @media(max-width: $screen-sm-max) {
+      width: 100%;
+      max-width: 570px;
+      margin: 0 auto;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      padding: 0;
+    }
   }
 
-  .info_list{
+  .info_list {
     padding: 0 0 0 38px;
+
+    @media(max-width: $screen-sm-max) {
+      padding: 0;
+    }
   }
 }

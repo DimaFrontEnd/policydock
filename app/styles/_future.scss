@@ -8,6 +8,10 @@
 
   .future_wrapper{
     align-items: center;
+
+    @media(max-width: $screen-md-max) {
+      display: block;
+    }
   }
 
   .future_block_wrapper{
@@ -53,6 +57,12 @@
 
   .future_description{
     width: 460px;
+
+    @media(max-width: $screen-md-max) {
+      width: 100%;
+      max-width: 560px;
+      margin: 30px auto 0;
+    }
   }
 
   .future_info{
@@ -60,15 +70,44 @@
     margin-right: 40px;
     position: relative;
     padding: 170px 0 170px 0;
+
+    @media(max-width: $screen-md-max) {
+      width: 100%;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      padding: 15px 0 0;
+    }
   }
 
   .future_info_list{
-
+    @media(max-width: $screen-xs-max) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 30px auto 0;
+    }
   }
 
   .future_info_item{
     position: absolute;
     text-align: center;
+
+    @media(max-width: $screen-xs-max) {
+      position: static;
+      width: calc(25% - 20px);
+      margin: 0 10px 20px;
+    }
+
+    @media(max-width: 670px) {
+      width: calc(33.33% - 20px);
+    }
+
+    @media(max-width: 500px) {
+      width: calc(50% - 20px);
+    }
 
     .item_icon{
       position: relative;

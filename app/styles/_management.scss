@@ -4,6 +4,10 @@
 
   .section_title {
     margin: 0 auto 50px;
+
+    @media(max-width: $screen-md-max) {
+      margin: 0 auto 30px;
+    }
   }
 
   .management_wrapper {
@@ -12,7 +16,7 @@
 
   .management_image {
     max-width: 235px;
-    margin: 0 0 25px;
+    margin: 0 auto 25px;
   }
 
   .slick-list {
@@ -42,12 +46,20 @@
       font-weight: 700;
       font-size: 32px;
       margin: 0 0 10px;
+
+      @media(max-width: $screen-md-max) {
+        font-size: 22px;
+      }
     }
   }
 
   .sub_title_wrapper {
     font-size: 32px;
     margin: 0 0 10px;
+
+    @media(max-width: $screen-md-max) {
+      font-size: 22px;
+    }
 
     .sub_title {
       display: inline-block;

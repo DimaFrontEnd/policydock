@@ -1,14 +1,23 @@
 .b_registration_info{
   padding: 50px 0 30px;
   background-color: #4080FE;
+
+  @media(max-width: $screen-xs-max) {
+    padding: 40px 0 30px;
+  }
   
   .section_title{
     color: #F8F8F8;
     margin: 0 auto 60px;
+
+    @media(max-width: $screen-sm-max) {
+      margin: 0 auto 30px;
+    }
   }
 
   .registration_wrapper{
     margin: 0 -12px;
+    justify-content: center;
   }
 
   .step_wrapper{
@@ -19,6 +28,18 @@
     text-align: center;
     padding: 20px 40px;
     margin: 0 12px 24px;
+
+    @media(max-width: $screen-md-max) {
+      padding: 15px 15px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      width: calc(50% - 24px);
+    }
+
+    @media(max-width: 570px) {
+      width: 100%;
+    }
 
     &:hover{
       background-color: #F1FDFF;
@@ -32,12 +53,29 @@
     font-weight: 700;
     color: #4080FE;
     margin: 0 auto 20px;
+
+    @media(max-width: $screen-sm-max) {
+      font-size: 20px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      margin: 0 auto 10px; 
+    }
   }
 
   .step_image{
     height: 135px;
     position: relative;
     margin: 0 auto 25px ;
+
+    @media(max-width: $screen-sm-max) {
+      height: 85px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      height: 65px;
+      margin: 0 auto 10px ;
+    }
 
     img{
       position: absolute;

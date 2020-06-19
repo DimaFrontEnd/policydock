@@ -2,6 +2,10 @@
   background-color: #E0FDFF;
   padding: 75px 0 70px;
 
+  @media(max-width: $screen-sm-max) {
+    padding: 40px 0 40px;
+  }
+
   .section_title{
     max-width: 975px;
     margin: 0 auto 50px;

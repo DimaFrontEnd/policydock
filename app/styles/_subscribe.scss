@@ -4,13 +4,25 @@
   color: #fff;
   overflow: hidden;
 
-  .subscribe_wrapper{
+  @media(max-width: $screen-xs-max) {
+    padding: 40px 0 40px;
+  }
+
+  .subscribe_wrapper {
     position: relative;
     z-index: 1;
   }
 
   .section_title {
     margin: 0 auto 120px;
+
+    @media(max-width: $screen-sm-max) {
+      margin: 0 auto 60px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      margin: 0 auto 30px;
+    }
   }
 
   .form_control {
@@ -21,7 +33,12 @@
     font-size: 12px;
     @include placeholderWhite();
 
-    &:hover, &:focus{
+    @media(max-width: $screen-xs-max) {
+      padding: 10px 8px;
+    }
+
+    &:hover,
+    &:focus {
       border-color: #fff;
     }
   }
@@ -37,10 +54,19 @@
     .input_wrapper {
       width: calc(100% - 225px);
       margin: 0 25px 0 0;
+
+      @media(max-width: $screen-xs-max) {
+        width: 100%;
+        margin: 0 0 15px;
+      }
     }
 
     .btn_wrapper {
       width: 200px;
+
+      @media(max-width: $screen-xs-max) {
+        margin: 0 auto;
+      }
     }
 
     .btn {
@@ -57,11 +83,22 @@
       padding: 0 10px 5px;
       font-weight: 600;
       font-size: 14px;
+
+      @media(max-width: $screen-xs-max) {
+        position: relative;
+        bottom: auto;
+      }
     }
   }
 
   .form_wrapper {
     position: relative;
+
+    @media(max-width: $screen-xs-max) {
+      display: block;
+      max-width: 450px;
+      margin: 0 auto;
+    }
   }
 
   .error_message {
@@ -73,6 +110,11 @@
     padding: 3px 8px;
     font-size: 12px;
     color: #FF785A;
+
+    @media(max-width: $screen-xs-max) {
+      position: relative;
+      top: auto;
+    }
   }
 
 
@@ -84,6 +126,12 @@
     .follow_title {
       display: inline-block;
       vertical-align: bottom;
+
+      @media(max-width: $screen-xs-max) {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
     }
 
     .social_list {
@@ -97,8 +145,8 @@
       margin: 0 15px;
       text-decoration: none;
 
-      svg{
-        path{
+      svg {
+        path {
           transition: all .2s linear;
         }
       }

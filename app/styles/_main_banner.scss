@@ -18,6 +18,19 @@
     background-position: center;
     transition: all .3s linear;
 
+    @media(max-width: $screen-md-max) {
+      width: 128px;
+      height: 128px;
+      background-size: 40px;
+    }
+
+    @media(max-width: $screen-sm-max) {
+      width: 88px;
+      height: 88px;
+      background-size: 30px;
+    }
+
+
     &:hover {
       background-color: rgba(64, 128, 254, 0.6);
 
@@ -38,6 +51,13 @@
       left: -30px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.15);
+
+      @media(max-width: $screen-sm-max) {
+        top: -15px;
+        bottom: -15px;
+        right: -15px;
+        left: -15px;
+      }
     }
   }
 
@@ -51,6 +71,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @media(max-width: $screen-md-max) {
+      min-height: 575px;
+    }
+
+    @media(max-width: $screen-sm-max) {
+      min-height: 475px;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      min-height: 375px;
+      display: block;
+      text-align: center;
+    }
   }
 
   .banner_image_wrapper {
@@ -62,6 +96,11 @@
     bottom: 0;
     margin: 0 auto;
     max-width: 1270px;
+
+    @media(max-width: $screen-xs-max) {
+      position: static;
+      padding: 15px;
+    }
   }
 
   .banner_image {
@@ -72,6 +111,18 @@
     bottom: 0;
     width: 50%;
 
+    @media(max-width: $screen-sm-max) {
+      width: 44%;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      position: relative;
+      left: 0;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -79,21 +130,47 @@
       right: 0;
       bottom: 0;
       margin: auto 0 auto auto;
+
+      @media(max-width: $screen-xs-max) {
+        position: static;
+        margin: 0 auto;
+      }
     }
   }
 
   .banner_inner {
     max-width: 55%;
+
+    @media(max-width: $screen-md-max) {
+      max-width: 50%;
+    }
+
+    @media(max-width: $screen-xs-max) {
+      max-width: 100%;
+    }
   }
 
   .banner_title {
     font-size: 56px;
     font-weight: 700;
     margin: 0 0 20px;
+
+    @media(max-width: $screen-md-max) {
+      font-size: 40px;
+    }
+
+    @media(max-width: $screen-sm-max) {
+      font-size: 30px;
+      margin: 10px auto 10px;
+    }
   }
 
   .banner_content_wrapper {
     max-width: 500px;
     margin: 0 0 35px;
+
+    @media(max-width: $screen-sm-max) {
+      margin: 0 auto 15px;
+    }
   }
 }
