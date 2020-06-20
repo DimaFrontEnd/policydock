@@ -48,6 +48,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    transition: all .2s linear;
+
+    &:hover{
+      background-color: #4080FE;
+      color: #fff;
+
+      &::after {
+        background-color: #fff;
+      }
+
+      &::before {
+        background-color: #fff;
+      }
+    }
 
     +.list_row {
       margin: 8px 0 0;
@@ -60,10 +74,11 @@
       height: 16px;
       border-radius: 50%;
       top: 50%;
-      background: #4080FE;
+      background-color: #4080FE;
       opacity: 0.2;
       left: 11px;
       margin-top: -8px;
+      transition: all .2s linear;
     }
 
     &::before {
@@ -77,6 +92,7 @@
       margin-top: -4px;
       background-color: #4080FE;
       box-shadow: 0px 1px 10px rgba(64, 128, 254, 0.7);
+      transition: all .2s linear;
     }
   }
 }

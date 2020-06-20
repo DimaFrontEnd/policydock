@@ -109,6 +109,7 @@
         flex-wrap: wrap;
         align-items: center;
         min-height: 68px;
+        transition: all .3s linear;
 
         @media(max-width: $screen-sm-max) {
           min-height: auto;
@@ -117,6 +118,11 @@
 
         @media(max-width: $screen-xs-max) {
           padding: 10px 15px 10px 34px;
+        }
+
+        &:hover{
+          background-color: #4080FE;
+          color: #fff;
         }
 
         &::before {

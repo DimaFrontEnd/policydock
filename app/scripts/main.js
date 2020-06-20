@@ -3,7 +3,6 @@ var app = {
   init: function () {
     app.windowResize();
     app.menu();
-    app.modals();
     app.sliders();
     app.tabs();
     app.accordeon();
@@ -44,14 +43,6 @@ var app = {
         });
       });
     }
-  },
-
-
-  modals: function () {
-    $('.jsOpenModals').magnificPopup({
-      removalDelay: 300,
-      mainClass: 'my-mfp-slide-bottom'
-    });
   },
 
 

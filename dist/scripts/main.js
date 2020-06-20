@@ -5,7 +5,6 @@ var app = {
   init: function init() {
     app.windowResize();
     app.menu();
-    app.modals();
     app.sliders();
     app.tabs();
     app.accordeon();
@@ -41,13 +40,6 @@ var app = {
         });
       });
     }
-  },
-
-  modals: function modals() {
-    $('.jsOpenModals').magnificPopup({
-      removalDelay: 300,
-      mainClass: 'my-mfp-slide-bottom'
-    });
   },
 
   sliders: function sliders() {
