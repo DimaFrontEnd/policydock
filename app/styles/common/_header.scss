@@ -8,9 +8,18 @@
     align-items: center;
   }
 
+  .header_logo{
+    padding: 4px 0;
+  }
+
   .header_link {
     display: inline-block;
     vertical-align: middle;
+    max-width: 100px;
+
+    @media(max-width: 767px) {
+      max-width: 90px;
+    }
 
     @media(max-width: 374px) {
       max-width: 80px;
@@ -93,8 +102,14 @@
         }
 
         >a {
+          display: block;
           color: #797B80;
           transition: all .2s linear;
+          padding: 27px 0;
+
+          @media(max-width: $screen-xs-max) {
+            padding: 0;
+          }
 
           &:hover {
             color: #4080FE;
@@ -147,7 +162,7 @@
       a {
         display: block;
         color: #797B80;
-        padding: 5px 15px;
+        padding: 9px 15px;
         font-size: 14px;
         transition: all .2s linear;
 

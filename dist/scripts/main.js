@@ -6,6 +6,7 @@ var app = {
     app.windowResize();
     app.menu();
     app.sliders();
+    app.selectric();
     app.tabs();
     app.accordeon();
   },
@@ -64,14 +65,24 @@ var app = {
       }, {
         breakpoint: 680,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          autoplaySpeed: 1500
         }
       }, {
         breakpoint: 410,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          autoplaySpeed: 1500
         }
       }]
+    });
+  },
+
+  selectric: function selectric() {
+    $('.jsSelectricView').selectric({
+      maxHeight: 150,
+      disableOnMobile: false,
+      nativeOnMobile: false
     });
   },
 

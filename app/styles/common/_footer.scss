@@ -181,6 +181,7 @@
       padding: 30px 0 0;
       text-align: center;
     }
+
     @media(max-width: $screen-xs-max) {
       padding: 0;
       text-align: center;
@@ -207,6 +208,40 @@
     @media(max-width: $screen-xs-max) {
       margin: 0 auto 15px;
     }
+  }
+
+  .static_logo {
+    opacity: .5;
+    transition: all .2s linear;
+  }
+
+  .logo_link {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    &:hover {
+      .static_logo {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .hover_logo {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .hover_logo {
+    position: absolute;
+    transition: all .2s linear;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .footer_content {

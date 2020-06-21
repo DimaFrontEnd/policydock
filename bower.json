@@ -5,6 +5,7 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "slick-carousel": "^1.8.1",
+    "jquery-selectric": "^1.13.0",
     "jquery-sticky": "sticky#^1.0.4"
   },
   "overrides": {

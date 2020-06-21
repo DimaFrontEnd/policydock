@@ -1,6 +1,7 @@
 .b_opportunities {
   background-color: #E0FDFF;
   padding: 75px 0 70px;
+  overflow: hidden;
 
   @media(max-width: $screen-sm-max) {
     padding: 40px 0 40px;
@@ -234,11 +235,43 @@
     text-align: center;
     margin: 45px auto 30px;
     position: relative;
+    z-index: 1;
 
     @media(max-width: 1350px) {
       margin: 25px auto 20px;
     }
 
+    &:hover {
+      .block_title {
+        color: #fff;
+      }
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: -15px;
+      left: -5px;
+      right: -5px;
+      bottom: -15px;
+      background-color: #4080FE;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 12px;
+      transition: all .2s linear;
+    }
 
     .icon_wrap {
       display: inline-block;
@@ -478,15 +511,30 @@
       width: calc(100% - 125px);
       position: relative;
       text-align: center;
+
+      @media(max-width: 1350px) {
+        height: 100%;
+        margin: 0;
+        position: relative;
+      }
     }
 
     .policy_dock {
       position: static;
+
+      @media(max-width: 1350px) {
+        margin: 90px 0 0;
+      }
     }
 
     .line_decor {
       left: 0;
       right: 3px;
+
+      @media(max-width: 1350px) {
+        width: 250px;
+        max-width: none;
+      }
     }
   }
 
@@ -541,6 +589,13 @@
     .second_row_inner {
       display: inline-block;
       vertical-align: top;
+    }
+  }
+
+  .hide_desktop{
+    display: none;
+    @media(max-width: 1350px) {
+      display: block;
     }
   }
 
@@ -619,7 +674,7 @@
           left: 0;
           right: 0;
           margin: 37px auto 0;
-          transform: rotate(90deg) translate(0,-15px);
+          transform: rotate(90deg) translate(0, -15px);
           transform-origin: left top;
         }
       }
@@ -627,6 +682,28 @@
 
     .list_decor {
       margin: 0 5px 0 0;
+
+      @media(max-width: 620px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        width: calc(100% + 10px);
+      }
+
+      .list_row {
+        @media(max-width: 620px) {
+          width: 50%;
+          padding: 0 5px;
+        }
+
+        +.list_row {
+          margin: 14px 0 0;
+
+          @media(max-width: 620px) {
+            margin: 0;
+          }
+        }
+      }
     }
 
     .list_item {
@@ -667,6 +744,14 @@
         max-width: 350px;
         width: 100%;
         margin: 0 auto 70px;
+      }
+    }
+
+    .policy_dock_wrap {
+      @media(max-width: 620px) {
+        width: 100%;
+        text-align: center;
+        margin: 15px 0 0;
       }
     }
 

@@ -6,7 +6,7 @@ footer.b_footer
       .top_row.flex
         .menu_wrapper
           .lang_warpper
-            select
+            select.jsSelectricView
               option(value="en") En
               option(value="en") En
           .main_menu
@@ -51,7 +51,10 @@ footer.b_footer
     .footer_bottom.flex
       .footer_logo
         a.logo_link(href="#")
-          img(src="images/footer_logo.png", alt="")
+          .static_logo
+            img(src="images/footer_logo.svg", alt="")
+          .hover_logo
+            img(src="images/footer_logo_hover.svg", alt="")
       
       .footer_content
         .content

@@ -384,12 +384,12 @@ block content
                 
                 .product_second_row
                   .second_row_inner
-                    .policy_dock
+                    .policy_dock.hide_desktop
                       .policy_dock_image
                         | <svg width="51" height="42" viewBox="0 0 51 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1724 20.2416L17.7258 25.8139L12.5464 31.0109L14.6714 33.1286L21.9612 25.8139L14.2973 18.1239L12.1724 20.2416Z" fill="#4080FE"/><path d="M24.9652 32.7394H37.1913V30.7394H24.9652V32.7394Z" fill="#4080FE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H50.2609V42.0002H0V0ZM48.2609 2V9.58276H2V2H48.2609ZM48.2609 12.9217H2V40.0002H48.2609V12.9217Z" fill="#4080FE"/></svg>
                       .policy_dock_title PolicyDock API
                       .line_decor
-                      
+
                     .block_icon
                       .icon_wrap
                         img(src="images/Agent.svg", alt="")
@@ -457,13 +457,17 @@ block content
 
 
 
-  .b_future
+  .b_the_future
     .container
 
       .section_title Be Ready Today for the Future
 
 
       .future_wrapper.flex
+
+        .circle_decor
+          img.decor_desktop(src="images/decor_desktop.svg", alt="")
+          img.decor_tablet(src="images/decor_tablet.svg", alt="")
 
         .future_info
 
@@ -535,15 +539,6 @@ block content
               .item_icon
                 | <svg width="28" height="48" viewBox="0 0 28 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.405 4.15992H11.8337C11.4054 4.15992 11.0596 4.50569 11.0596 4.93403C11.0596 5.36237 11.4054 5.70814 11.8337 5.70814H15.405C15.8333 5.70814 16.1791 5.36237 16.1791 4.93403C16.1791 4.50569 15.8333 4.15992 15.405 4.15992Z" fill="#4080FE"/><path d="M23.8116 0H3.42673C1.5379 0 0 1.5379 0 3.42673V44.5733C0 46.4621 1.5379 48 3.42673 48H23.8065C25.6953 48 27.2332 46.4621 27.2332 44.5733V3.42673C27.2332 1.5379 25.6953 0 23.8116 0ZM25.685 44.5681C25.685 45.6003 24.8438 46.4466 23.8065 46.4466H3.42673C2.39458 46.4466 1.54822 45.6054 1.54822 44.5681V3.42673C1.54822 2.39458 2.38942 1.54822 3.42673 1.54822H23.8065C24.8386 1.54822 25.685 2.38942 25.685 3.42673V44.5681Z" fill="#4080FE"/><path d="M13.6191 38.4786C12.2257 38.4786 11.0955 39.6088 11.0955 41.0022C11.0955 42.3956 12.2257 43.5258 13.6191 43.5258C15.0125 43.5258 16.1427 42.3956 16.1427 41.0022C16.1427 39.6088 15.0125 38.4786 13.6191 38.4786ZM13.6191 41.9776C13.0824 41.9776 12.6437 41.539 12.6437 41.0022C12.6437 40.4655 13.0824 40.0269 13.6191 40.0269C14.1558 40.0269 14.5945 40.4655 14.5945 41.0022C14.5945 41.539 14.1558 41.9776 13.6191 41.9776Z" fill="#4080FE"/></svg>
               .item_title Mobile APP
-
-
-        .future_description
-          .description_list.list_decoration
-            .list_row Inregrate with Digital Partners Instantly
-            .list_row Automate your workflow
-            .list_row Elastic Pricing that scales for your needs
-            .list_row Real-time dynamic product administration
-            .list_row Focus on sales, avoid needless paperwork
 
 
   .b_platform
@@ -798,20 +793,8 @@ block content
     .subscribe_wrapper
       .container
 
-        .all_form
-
-          .section_title Subscribe to our Newsletter
-
-          .subscribe_form_wrapper
-            form
-              .form_wrapper.flex
-                .input_wrapper
-                  label.label E-mail
-                  input.form_control(type="text" placeholder="Your E-mail")
-                  .error_message Error massage
-                .btn_wrapper
-                  input.btn.btn_white(type="submit", value="Subscribe")
-
+        .subscribe_success
+          .tile Thank you for subscribing
 
         
         .follow_wrapper
@@ -843,7 +826,7 @@ block content
                 .form_row_wrapper
                   .form_row
                     .item_label Business E-mail
-                    input.form_control.error(type="email" placeholder="Your E-mail")
+                    input.form_control(type="email" placeholder="Your E-mail")
 
                   .form_row
                     .item_label Name
