@@ -49,9 +49,9 @@ var app = {
       slidesToShow: 5,
       slidesToScroll: 1,
       touchThreshold: 15,
-      speed: 700,
+      speed: 800,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 2000,
       responsive: [{
         breakpoint: 1300,
         settings: {
@@ -66,13 +66,13 @@ var app = {
         breakpoint: 680,
         settings: {
           slidesToShow: 2,
-          autoplaySpeed: 1500
+          autoplaySpeed: 2000
         }
       }, {
-        breakpoint: 410,
+        breakpoint: 510,
         settings: {
           slidesToShow: 1,
-          autoplaySpeed: 1500
+          autoplaySpeed: 2000
         }
       }]
     });

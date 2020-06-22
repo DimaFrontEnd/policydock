@@ -12,6 +12,10 @@
 
   .management_wrapper {
     margin: 0 -8px;
+
+    @media(max-width: $screen-xs-max) {
+      margin: 0 -15px;
+    }
   }
 
   .management_image {
@@ -21,6 +25,10 @@
 
   .slick-list {
     padding: 0 0 20px;
+
+    @media(max-width: 510px) {
+      padding: 0 30% 20px 0;
+    }
   }
 
   .image_wrapper {

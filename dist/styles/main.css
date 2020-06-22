@@ -4924,6 +4924,12 @@ input::-ms-clear {
   margin: 0 -8px;
 }
 
+@media (max-width: 767px) {
+  .b_management .management_wrapper {
+    margin: 0 -15px;
+  }
+}
+
 .b_management .management_image {
   max-width: 235px;
   margin: 0 auto 25px;
@@ -4931,6 +4937,12 @@ input::-ms-clear {
 
 .b_management .slick-list {
   padding: 0 0 20px;
+}
+
+@media (max-width: 510px) {
+  .b_management .slick-list {
+    padding: 0 30% 20px 0;
+  }
 }
 
 .b_management .image_wrapper {
